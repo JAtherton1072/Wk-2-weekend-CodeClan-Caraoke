@@ -31,17 +31,17 @@ class RoomTest < MiniTest::Test
   end
 
 
-  # def test_song_has_title
-  #   p @song5.title
-  #   assert_equal("Let Me Entertain You", @song5.title())
-  # end
-  #
-  # def test_room_type
-  #   p @room2.type
-  #   assert_equal("rock", @room2.type())
-  #
-  #
-  # end
+  def test_song_has_title
+    p @song5.title
+    assert_equal("Let Me Entertain You", @song5.title())
+  end
+
+  def test_room_type
+    p @room2.type
+    assert_equal("rock", @room2.type())
+
+
+  end
 
 
   def test_check_in_guest
@@ -55,42 +55,42 @@ class RoomTest < MiniTest::Test
 
 
 
-  # def test_check_out_guest
-  #   @room2.check_in_guest(@guest1)
-  #   @room2.check_in_guest(@guest2)
-  #   @room2.check_out_guest(@guest1)
-  #   assert_equal(1, @room2.guest_count)
-  # end
-  #
-  #
-  # def test_list_songs()
-  #     song_list = @room1.songs()
-  #     assert_equal(@song_list1, song_list)
-  #   end
-  #
-  #
-  # def test_add_song()
-  #    @room1.add_song(@song5)
-  #    all_songs = @room1.songs()
-  #    assert_equal(5, all_songs.count())
-  # end
-  #
-  #
-  # def test_guest_exceed_capacity
-  #   @room2.check_in_guest(@guest1)
-  #   @room2.check_in_guest(@guest2)
-  #   @room2.check_in_guest(@guest3)
-  #   @room2.check_in_guest(@guest4)
-  #   assert_equal(3, @room2.guest_count)
-  # end
-  #
-  #
-  #
-  # def test_guest_favourite_song_on_playlist
-  #   result = @room1.favourite_song_on_playlist(@song2)
-  #
-  #   assert_equal("Whoo!",result)
-  # end
+  def test_check_out_guest
+    @room2.check_in_guest(@guest1)
+    @room2.check_in_guest(@guest2)
+    @room2.check_out_guest(@guest1)
+    assert_equal(1, @room2.guest_count)
+  end
+
+
+  def test_list_songs()
+      song_list = @room1.songs()
+      assert_equal(@song_list1, song_list)
+    end
+
+
+  def test_add_song()
+     @room1.add_song(@song5)
+     all_songs = @room1.songs()
+     assert_equal(5, all_songs.count())
+  end
+
+
+  def test_guest_exceed_capacity
+    @room2.check_in_guest(@guest1)
+    @room2.check_in_guest(@guest2)
+    @room2.check_in_guest(@guest3)
+    @room2.check_in_guest(@guest4)
+    assert_equal(3, @room2.guest_count)
+  end
+
+
+
+  def test_guest_favourite_song_on_playlist
+    result = @room1.favourite_song_on_playlist(@song2)
+
+    assert_equal("Whoo!",result)
+  end
 
 
 
